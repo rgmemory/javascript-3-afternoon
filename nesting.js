@@ -52,6 +52,18 @@ var employees = [
 
 //Code Here
 
+var employeeUpdater = () => {
+  for(let i = 0; i < employees.length; i++){
+    if(employees[i].firstName === "Theo"){
+      delete employees[i];
+    }
+    else if(employees[i].firstName === "Lorie"){
+      employees[i].department = "HR"
+    }
+  }
+  return employees;
+}
+
 
 
 ////////// PROBLEM 2 //////////
@@ -69,6 +81,24 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+
+function removeDuplicates(){
+  var tempArray = [];
+  // for(let i = 0; i < workplaceAccidents.length; i++){
+  //   if(tempArray.indexOf(workplaceAccidents[i]) === -1){
+  //     tempArray.push(workplaceAccidents[i]);
+  //   }
+  // }
+
+  for(var i = 0; i < workplaceAccidents.length; i++){
+    for(var j = 0; j < tempArray.length; j++){
+      if(tempArray[j] === workplaceAccidents[i]){
+
+      }
+    }
+  }
+  return tempArray
+}
 
 
 
@@ -97,8 +127,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;;
 
 
 
@@ -128,6 +158,16 @@ var myCar = {
   ]
 }
 // Do not edit the code above.
+
+function recordCleaner(){
+  for(var prop in myCar){
+    if(myCar[prop] === "accidents"){
+      // console.log(myCar[prop])
+    }
+  }
+}
+
+// recordCleaner();
 
 /*
   Above is some information about my car. As you can see, I am not the best driver.
